@@ -192,7 +192,7 @@ awk. A sample is saved in `outputs/traces/activity_sample.log`.
 
 ## Author
 
-`<Your Name>` - `<Roll No / Course / Institute>`
+`<Nikhil Dhandhi>` - `<2401360026 / B.Tech CSE UI/UX>`
 
 ## License
 

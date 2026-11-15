@@ -1,0 +1,25 @@
+=== Live System Information (Bash) ===
+Host        : vm
+Kernel      : Linux 6.18.44-fc-v470
+CPU cores   : 1
+Load average: 0.41 (1m)  0.18 (5m)  0.07 (15m)
+Memory      : 3992 MB total, 3727 MB available (6.6% used)
+Swap        : 0 MB total, 0 MB free
+
+Disk usage (root filesystem):
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda        252G  8.0G   10G  45% /
+
+Top 5 processes by memory:
+  PID COMMAND         %MEM %CPU
+  482 python3          1.5 92.3
+   65 rclone-filestor  0.7  0.0
+    1 process_api      0.1  0.1
+  492 ps               0.0  0.0
+  484 bash             0.0  0.0
+
+Process states:
+  I   30
+  R   1
+  S   31
+

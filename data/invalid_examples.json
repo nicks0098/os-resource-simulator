@@ -1,0 +1,7 @@
+{
+  "note": "Used by test cases / demo to show the validation layer rejecting bad input.",
+  "bad_processes": [{"pid": "P1", "arrival": 0, "burst": 0}],
+  "bad_frames": 0,
+  "bad_disk_request": [250],
+  "bad_banker_available": [1, 2]
+}

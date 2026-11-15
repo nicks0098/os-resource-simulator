@@ -1,0 +1,24 @@
+=== Activity Log Summary (Bash) ===
+Total entries: 639
+
+Entries by level:
+  ERROR    20
+  INFO     575
+  WARNING  44
+
+Entries by module:
+  analysis     6
+  bash_bridge  9
+  deadlock     132
+  main         38
+  memory       313
+  scheduler    66
+  storage      75
+
+Last 5 warnings/errors:
+  2026-11-15 12:58:22,853|ERROR|main|validation error: head must be >= 0, got -5
+  2026-11-15 12:58:23,355|WARNING|deadlock|banker request P4 [3, 3, 0] DENIED: resources not available, P4 must wait
+  2026-11-15 12:58:23,355|WARNING|deadlock|banker request P0 [0, 2, 0] DENIED: granting would leave the system in an UNSAFE state
+  2026-11-15 12:58:23,921|WARNING|deadlock|banker request P4 [3, 3, 0] DENIED: resources not available, P4 must wait
+  2026-11-15 12:58:23,921|WARNING|deadlock|banker request P0 [0, 2, 0] DENIED: granting would leave the system in an UNSAFE state
+

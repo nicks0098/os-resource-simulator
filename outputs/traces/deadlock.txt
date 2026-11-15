@@ -1,0 +1,17 @@
+=== Banker's Algorithm: Safety Check ===
+Need matrix (Max - Allocation):
+  P0: [7, 4, 3]
+  P1: [1, 2, 2]
+  P2: [6, 0, 0]
+  P3: [0, 1, 1]
+  P4: [4, 3, 1]
+  P1: need [1, 2, 2] <= work [3, 3, 2] -> runs, releases [2, 0, 0]
+  P3: need [0, 1, 1] <= work [5, 3, 2] -> runs, releases [2, 1, 1]
+  P4: need [4, 3, 1] <= work [7, 4, 3] -> runs, releases [0, 0, 2]
+  P0: need [7, 4, 3] <= work [7, 4, 5] -> runs, releases [0, 1, 0]
+  P2: need [6, 0, 0] <= work [7, 5, 5] -> runs, releases [3, 0, 2]
+Result: SAFE state, safe sequence = P1 -> P3 -> P4 -> P0 -> P2
+Request P1 [1, 0, 2]: GRANTED: safe sequence P1 -> P3 -> P4 -> P0 -> P2
+Request P4 [3, 3, 0]: DENIED: resources not available, P4 must wait
+Request P0 [0, 2, 0]: DENIED: granting would leave the system in an UNSAFE state
+Deadlock detection: DEADLOCK among P1, P2, P3, P4

@@ -1,0 +1,73 @@
+2026-11-15 12:58:25,526|INFO|scheduler|scheduler FCFS processes=5 avg_wait=11.0 avg_tat=16.6
+2026-11-15 12:58:25,526|INFO|scheduler|scheduler SJF processes=5 avg_wait=7.8 avg_tat=13.4
+2026-11-15 12:58:25,526|INFO|scheduler|scheduler SRTF processes=5 avg_wait=6.4 avg_tat=12.0
+2026-11-15 12:58:25,526|INFO|scheduler|scheduler Priority processes=5 avg_wait=10.2 avg_tat=15.8
+2026-11-15 12:58:25,526|INFO|scheduler|scheduler RR(q=4) processes=5 avg_wait=13.0 avg_tat=18.6
+2026-11-15 12:58:25,527|INFO|memory|page replacement FIFO frames=3 faults=15
+2026-11-15 12:58:25,527|INFO|memory|page replacement LRU frames=3 faults=12
+2026-11-15 12:58:25,528|INFO|memory|page replacement Optimal frames=3 faults=9
+2026-11-15 12:58:25,528|INFO|memory|allocation first partitions=5 requests=4 unallocated=1
+2026-11-15 12:58:25,528|INFO|memory|allocation best partitions=5 requests=4 unallocated=0
+2026-11-15 12:58:25,528|INFO|memory|allocation worst partitions=5 requests=4 unallocated=1
+2026-11-15 12:58:25,529|INFO|deadlock|banker safety safe=True sequence=['P1', 'P3', 'P4', 'P0', 'P2']
+2026-11-15 12:58:25,529|INFO|deadlock|banker safety safe=True sequence=['P1', 'P3', 'P4', 'P0', 'P2']
+2026-11-15 12:58:25,529|INFO|deadlock|banker request P1 [1, 0, 2] granted
+2026-11-15 12:58:25,529|WARNING|deadlock|banker request P4 [3, 3, 0] DENIED: resources not available, P4 must wait
+2026-11-15 12:58:25,529|INFO|deadlock|banker safety safe=False sequence=[]
+2026-11-15 12:58:25,529|WARNING|deadlock|banker request P0 [0, 2, 0] DENIED: granting would leave the system in an UNSAFE state
+2026-11-15 12:58:25,529|INFO|deadlock|deadlock detection deadlocked=['P1', 'P2', 'P3', 'P4']
+2026-11-15 12:58:25,530|INFO|storage|disk FCFS head=53 movement=640
+2026-11-15 12:58:25,530|INFO|storage|disk SSTF head=53 movement=236
+2026-11-15 12:58:25,530|INFO|storage|disk SCAN(down) head=53 movement=236
+2026-11-15 12:58:25,530|INFO|storage|disk C-SCAN(down) head=53 movement=386
+2026-11-15 12:58:25,530|INFO|storage|disk LOOK(down) head=53 movement=208
+2026-11-15 12:58:25,530|INFO|storage|disk C-LOOK(down) head=53 movement=326
+2026-11-15 12:58:25,530|INFO|scheduler|scheduler FCFS processes=5 avg_wait=11.0 avg_tat=16.6
+2026-11-15 12:58:25,530|INFO|scheduler|scheduler SJF processes=5 avg_wait=7.8 avg_tat=13.4
+2026-11-15 12:58:25,530|INFO|scheduler|scheduler SRTF processes=5 avg_wait=6.4 avg_tat=12.0
+2026-11-15 12:58:25,530|INFO|scheduler|scheduler Priority processes=5 avg_wait=10.2 avg_tat=15.8
+2026-11-15 12:58:25,531|INFO|scheduler|scheduler RR(q=4) processes=5 avg_wait=13.0 avg_tat=18.6
+2026-11-15 12:58:25,927|INFO|memory|page replacement FIFO frames=1 faults=20
+2026-11-15 12:58:25,927|INFO|memory|page replacement FIFO frames=2 faults=15
+2026-11-15 12:58:25,927|INFO|memory|page replacement FIFO frames=3 faults=15
+2026-11-15 12:58:25,927|INFO|memory|page replacement FIFO frames=4 faults=10
+2026-11-15 12:58:25,927|INFO|memory|page replacement FIFO frames=5 faults=9
+2026-11-15 12:58:25,927|INFO|memory|page replacement FIFO frames=6 faults=6
+2026-11-15 12:58:25,927|INFO|memory|page replacement FIFO frames=7 faults=6
+2026-11-15 12:58:25,927|INFO|memory|page replacement LRU frames=1 faults=20
+2026-11-15 12:58:25,927|INFO|memory|page replacement LRU frames=2 faults=17
+2026-11-15 12:58:25,927|INFO|memory|page replacement LRU frames=3 faults=12
+2026-11-15 12:58:25,927|INFO|memory|page replacement LRU frames=4 faults=8
+2026-11-15 12:58:25,927|INFO|memory|page replacement LRU frames=5 faults=7
+2026-11-15 12:58:25,927|INFO|memory|page replacement LRU frames=6 faults=6
+2026-11-15 12:58:25,927|INFO|memory|page replacement LRU frames=7 faults=6
+2026-11-15 12:58:25,927|INFO|memory|page replacement Optimal frames=1 faults=20
+2026-11-15 12:58:25,927|INFO|memory|page replacement Optimal frames=2 faults=13
+2026-11-15 12:58:25,927|INFO|memory|page replacement Optimal frames=3 faults=9
+2026-11-15 12:58:25,927|INFO|memory|page replacement Optimal frames=4 faults=8
+2026-11-15 12:58:25,927|INFO|memory|page replacement Optimal frames=5 faults=7
+2026-11-15 12:58:25,927|INFO|memory|page replacement Optimal frames=6 faults=6
+2026-11-15 12:58:25,927|INFO|memory|page replacement Optimal frames=7 faults=6
+2026-11-15 12:58:26,050|INFO|memory|page replacement FIFO frames=1 faults=12
+2026-11-15 12:58:26,051|INFO|memory|page replacement FIFO frames=2 faults=12
+2026-11-15 12:58:26,051|INFO|memory|page replacement FIFO frames=3 faults=9
+2026-11-15 12:58:26,051|INFO|memory|page replacement FIFO frames=4 faults=10
+2026-11-15 12:58:26,051|INFO|memory|page replacement FIFO frames=5 faults=5
+2026-11-15 12:58:26,051|INFO|memory|page replacement FIFO frames=6 faults=5
+2026-11-15 12:58:26,164|INFO|memory|allocation first partitions=5 requests=4 unallocated=1
+2026-11-15 12:58:26,165|INFO|memory|allocation best partitions=5 requests=4 unallocated=0
+2026-11-15 12:58:26,165|INFO|memory|allocation worst partitions=5 requests=4 unallocated=1
+2026-11-15 12:58:26,165|INFO|deadlock|banker safety safe=True sequence=['P1', 'P3', 'P4', 'P0', 'P2']
+2026-11-15 12:58:26,166|INFO|deadlock|banker safety safe=True sequence=['P1', 'P3', 'P4', 'P0', 'P2']
+2026-11-15 12:58:26,166|INFO|deadlock|banker request P1 [1, 0, 2] granted
+2026-11-15 12:58:26,166|WARNING|deadlock|banker request P4 [3, 3, 0] DENIED: resources not available, P4 must wait
+2026-11-15 12:58:26,166|INFO|deadlock|banker safety safe=False sequence=[]
+2026-11-15 12:58:26,166|WARNING|deadlock|banker request P0 [0, 2, 0] DENIED: granting would leave the system in an UNSAFE state
+2026-11-15 12:58:26,166|INFO|deadlock|deadlock detection deadlocked=['P1', 'P2', 'P3', 'P4']
+2026-11-15 12:58:26,166|INFO|storage|disk FCFS head=53 movement=640
+2026-11-15 12:58:26,166|INFO|storage|disk SSTF head=53 movement=236
+2026-11-15 12:58:26,166|INFO|storage|disk SCAN(down) head=53 movement=236
+2026-11-15 12:58:26,166|INFO|storage|disk C-SCAN(down) head=53 movement=386
+2026-11-15 12:58:26,166|INFO|storage|disk LOOK(down) head=53 movement=208
+2026-11-15 12:58:26,166|INFO|storage|disk C-LOOK(down) head=53 movement=326
+2026-11-15 12:58:26,406|INFO|analysis|full analysis generated, charts in /home/claude/os-resource-simulator/outputs/charts

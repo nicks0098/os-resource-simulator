@@ -1,0 +1,290 @@
+=== CPU Scheduling: FCFS ===
+Gantt chart:
+|       P1       |   P2   |        P3        |    P4    |  P5 |
+0                8        12                 21         26    28
+
+PID     Arr  Burst  Compl   TAT    WT    RT
+P1        0      8      8     8     0     0
+P2        1      4     12    11     7     7
+P3        2      9     21    19    10    10
+P4        3      5     26    23    18    18
+P5        6      2     28    22    20    20
+
+Avg waiting=11.0  Avg turnaround=16.6  Avg response=11.0
+CPU utilization=100.0%  Throughput=0.1786 proc/unit  Context switches=4
+
+=== CPU Scheduling: SJF ===
+Gantt chart:
+|       P1       |  P5 |   P2   |    P4    |        P3        |
+0                8     10       14         19                 28
+
+PID     Arr  Burst  Compl   TAT    WT    RT
+P1        0      8      8     8     0     0
+P2        1      4     14    13     9     9
+P3        2      9     28    26    17    17
+P4        3      5     19    16    11    11
+P5        6      2     10     4     2     2
+
+Avg waiting=7.8  Avg turnaround=13.4  Avg response=7.8
+CPU utilization=100.0%  Throughput=0.1786 proc/unit  Context switches=4
+
+=== CPU Scheduling: SRTF ===
+Gantt chart:
+|  P1 |   P2   |  P4 |  P5 |   P4   |      P1      |        P3        |
+0     1        5     6     8        12             19                 28
+
+PID     Arr  Burst  Compl   TAT    WT    RT
+P1        0      8     19    19    11     0
+P2        1      4      5     4     0     0
+P3        2      9     28    26    17    17
+P4        3      5     12     9     4     2
+P5        6      2      8     2     0     0
+
+Avg waiting=6.4  Avg turnaround=12.0  Avg response=3.8
+CPU utilization=100.0%  Throughput=0.1786 proc/unit  Context switches=6
+
+=== CPU Scheduling: Priority ===
+Gantt chart:
+|       P1       |   P2   |    P4    |        P3        |  P5 |
+0                8        12         17                 26    28
+
+PID     Arr  Burst  Compl   TAT    WT    RT
+P1        0      8      8     8     0     0
+P2        1      4     12    11     7     7
+P3        2      9     26    24    15    15
+P4        3      5     17    14     9     9
+P5        6      2     28    22    20    20
+
+Avg waiting=10.2  Avg turnaround=15.8  Avg response=10.2
+CPU utilization=100.0%  Throughput=0.1786 proc/unit  Context switches=4
+
+=== CPU Scheduling: RR(q=4) ===
+Gantt chart:
+|   P1   |   P2   |   P3   |   P4   |   P1   |  P5 |   P3   |  P4 |  P3 |
+0        4        8        12       16       20    22       26    27    28
+
+PID     Arr  Burst  Compl   TAT    WT    RT
+P1        0      8     20    20    12     0
+P2        1      4      8     7     3     3
+P3        2      9     28    26    17     6
+P4        3      5     27    24    19     9
+P5        6      2     22    16    14    14
+
+Avg waiting=13.0  Avg turnaround=18.6  Avg response=6.4
+CPU utilization=100.0%  Throughput=0.1786 proc/unit  Context switches=8
+=== Page Replacement: FIFO (3 frames) ===
+ Ref | Frames        | Result
+   7 |  7           | FAULT
+   0 |  7  0        | FAULT
+   1 |  7  0  1     | FAULT
+   2 |  2  0  1     | FAULT
+   0 |  2  0  1     | hit
+   3 |  2  3  1     | FAULT
+   0 |  2  3  0     | FAULT
+   4 |  4  3  0     | FAULT
+   2 |  4  2  0     | FAULT
+   3 |  4  2  3     | FAULT
+   0 |  0  2  3     | FAULT
+   3 |  0  2  3     | hit
+   2 |  0  2  3     | hit
+   1 |  0  1  3     | FAULT
+   2 |  0  1  2     | FAULT
+   0 |  0  1  2     | hit
+   1 |  0  1  2     | hit
+   7 |  7  1  2     | FAULT
+   0 |  7  0  2     | FAULT
+   1 |  7  0  1     | FAULT
+Faults=15 Hits=5 Fault rate=75.0%
+
+=== Page Replacement: LRU (3 frames) ===
+ Ref | Frames        | Result
+   7 |  7           | FAULT
+   0 |  7  0        | FAULT
+   1 |  7  0  1     | FAULT
+   2 |  2  0  1     | FAULT
+   0 |  2  0  1     | hit
+   3 |  2  0  3     | FAULT
+   0 |  2  0  3     | hit
+   4 |  4  0  3     | FAULT
+   2 |  4  0  2     | FAULT
+   3 |  4  3  2     | FAULT
+   0 |  0  3  2     | FAULT
+   3 |  0  3  2     | hit
+   2 |  0  3  2     | hit
+   1 |  1  3  2     | FAULT
+   2 |  1  3  2     | hit
+   0 |  1  0  2     | FAULT
+   1 |  1  0  2     | hit
+   7 |  1  0  7     | FAULT
+   0 |  1  0  7     | hit
+   1 |  1  0  7     | hit
+Faults=12 Hits=8 Fault rate=60.0%
+
+=== Page Replacement: Optimal (3 frames) ===
+ Ref | Frames        | Result
+   7 |  7           | FAULT
+   0 |  7  0        | FAULT
+   1 |  7  0  1     | FAULT
+   2 |  2  0  1     | FAULT
+   0 |  2  0  1     | hit
+   3 |  2  0  3     | FAULT
+   0 |  2  0  3     | hit
+   4 |  2  4  3     | FAULT
+   2 |  2  4  3     | hit
+   3 |  2  4  3     | hit
+   0 |  2  0  3     | FAULT
+   3 |  2  0  3     | hit
+   2 |  2  0  3     | hit
+   1 |  2  0  1     | FAULT
+   2 |  2  0  1     | hit
+   0 |  2  0  1     | hit
+   1 |  2  0  1     | hit
+   7 |  7  0  1     | FAULT
+   0 |  7  0  1     | hit
+   1 |  7  0  1     | hit
+Faults=9 Hits=11 Fault rate=45.0%
+
+=== Contiguous Allocation: First-fit ===
+Partitions: [100, 500, 200, 300, 600]
+Request     Size  Partition
+P1           212  #1 (500 KB)
+P2           417  #4 (600 KB)
+P3           112  #2 (200 KB)
+P4           426  NOT ALLOCATED
+Internal fragmentation=559 KB  Free (unused partitions)=400 KB  Unallocated=[426]
+
+=== Contiguous Allocation: Best-fit ===
+Partitions: [100, 500, 200, 300, 600]
+Request     Size  Partition
+P1           212  #3 (300 KB)
+P2           417  #1 (500 KB)
+P3           112  #2 (200 KB)
+P4           426  #4 (600 KB)
+Internal fragmentation=433 KB  Free (unused partitions)=100 KB  Unallocated=[]
+
+=== Contiguous Allocation: Worst-fit ===
+Partitions: [100, 500, 200, 300, 600]
+Request     Size  Partition
+P1           212  #4 (600 KB)
+P2           417  #1 (500 KB)
+P3           112  #3 (300 KB)
+P4           426  NOT ALLOCATED
+Internal fragmentation=659 KB  Free (unused partitions)=300 KB  Unallocated=[426]
+=== Banker's Algorithm: Safety Check ===
+Need matrix (Max - Allocation):
+  P0: [7, 4, 3]
+  P1: [1, 2, 2]
+  P2: [6, 0, 0]
+  P3: [0, 1, 1]
+  P4: [4, 3, 1]
+  P1: need [1, 2, 2] <= work [3, 3, 2] -> runs, releases [2, 0, 0]
+  P3: need [0, 1, 1] <= work [5, 3, 2] -> runs, releases [2, 1, 1]
+  P4: need [4, 3, 1] <= work [7, 4, 3] -> runs, releases [0, 0, 2]
+  P0: need [7, 4, 3] <= work [7, 4, 5] -> runs, releases [0, 1, 0]
+  P2: need [6, 0, 0] <= work [7, 5, 5] -> runs, releases [3, 0, 2]
+Result: SAFE state, safe sequence = P1 -> P3 -> P4 -> P0 -> P2
+Request P1 [1, 0, 2]: GRANTED: safe sequence P1 -> P3 -> P4 -> P0 -> P2
+Request P4 [3, 3, 0]: DENIED: resources not available, P4 must wait
+Request P0 [0, 2, 0]: DENIED: granting would leave the system in an UNSAFE state
+Deadlock detection: DEADLOCK among P1, P2, P3, P4
+=== Disk Scheduling: FCFS ===
+Head path: 53 -> 98 -> 183 -> 37 -> 122 -> 14 -> 124 -> 65 -> 67
+Total head movement=640 cylinders  Average seek=80.0
+
+=== Disk Scheduling: SSTF ===
+Head path: 53 -> 65 -> 67 -> 37 -> 14 -> 98 -> 122 -> 124 -> 183
+Total head movement=236 cylinders  Average seek=29.5
+
+=== Disk Scheduling: SCAN(down) ===
+Head path: 53 -> 37 -> 14 -> 0 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183
+Total head movement=236 cylinders  Average seek=26.22
+
+=== Disk Scheduling: C-SCAN(down) ===
+Head path: 53 -> 37 -> 14 -> 0 -> 199 -> 183 -> 124 -> 122 -> 98 -> 67 -> 65
+Total head movement=386 cylinders  Average seek=38.6
+
+=== Disk Scheduling: LOOK(down) ===
+Head path: 53 -> 37 -> 14 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183
+Total head movement=208 cylinders  Average seek=26.0
+
+=== Disk Scheduling: C-LOOK(down) ===
+Head path: 53 -> 37 -> 14 -> 183 -> 124 -> 122 -> 98 -> 67 -> 65
+Total head movement=326 cylinders  Average seek=40.75
+##### CPU SCHEDULING #####
++-----------+--------+---------+--------+-------+------------+--------------+
+| Algorithm | Avg WT | Avg TAT | Avg RT | CPU % | Throughput | Ctx switches |
++-----------+--------+---------+--------+-------+------------+--------------+
+| FCFS      | 11.0   | 16.6    | 11.0   | 100.0 | 0.1786     | 4            |
+| SJF       | 7.8    | 13.4    | 7.8    | 100.0 | 0.1786     | 4            |
+| SRTF      | 6.4    | 12.0    | 3.8    | 100.0 | 0.1786     | 6            |
+| Priority  | 10.2   | 15.8    | 10.2   | 100.0 | 0.1786     | 4            |
+| RR(q=4)   | 13.0   | 18.6    | 6.4    | 100.0 | 0.1786     | 8            |
++-----------+--------+---------+--------+-------+------------+--------------+
+
+Technical observations:
+  - SRTF gives the lowest average waiting time (6.4).
+  - SRTF gives the best average response time (3.8).
+  - RR(q=4) performs the most context switches (8), which would add overhead on real hardware.
+  - FCFS suffers from the convoy effect: short jobs wait behind long ones.
+
+##### MEMORY MANAGEMENT #####
++--------+------+-----+---------+
+| Frames | FIFO | LRU | Optimal |
++--------+------+-----+---------+
+| 1      | 20   | 20  | 20      |
+| 2      | 15   | 17  | 13      |
+| 3      | 15   | 12  | 9       |
+| 4      | 10   | 8   | 8       |
+| 5      | 9    | 7   | 7       |
+| 6      | 6    | 6   | 6       |
+| 7      | 6    | 6   | 6       |
++--------+------+-----+---------+
+
++-----------+--------------------+------------------------+-------------+
+| Strategy  | Internal frag (KB) | Unused partitions (KB) | Unallocated |
++-----------+--------------------+------------------------+-------------+
+| First-fit | 559                | 400                    | [426]       |
+| Best-fit  | 433                | 100                    | none        |
+| Worst-fit | 659                | 300                    | [426]       |
++-----------+--------------------+------------------------+-------------+
+
+Technical observations:
+  - With 3 frames: FIFO=15, LRU=12, Optimal=9 faults; Optimal is the lower bound.
+  - Belady's anomaly confirmed: FIFO faults go from 9 (3 frames) to 10 (4 frames) on the classic string - more memory, more faults.
+  - LRU and Optimal are stack algorithms and never show the anomaly.
+  - Best-fit minimises wasted space per request but can leave tiny unusable holes.
+
+##### DEADLOCK HANDLING #####
++-----------------------+----------+------------------------------------------------------------+
+| Scenario              | Outcome  | Detail                                                     |
++-----------------------+----------+------------------------------------------------------------+
+| Initial state         | SAFE     | P1 -> P3 -> P4 -> P0 -> P2                                 |
+| P1 requests [1, 0, 2] | GRANTED  | GRANTED: safe sequence P1 -> P3 -> P4 -> P0 -> P2          |
+| P4 requests [3, 3, 0] | DENIED   | DENIED: resources not available, P4 must wait              |
+| P0 requests [0, 2, 0] | DENIED   | DENIED: granting would leave the system in an UNSAFE state |
+| Detection scenario    | DEADLOCK | P1, P2, P3, P4                                             |
++-----------------------+----------+------------------------------------------------------------+
+
+Technical observations:
+  - The initial state is safe, so every process can finish in the order shown.
+  - A request is denied if it exceeds the claim, exceeds availability, or leads to an unsafe state.
+  - Avoidance (Banker's) prevents deadlock; detection only reports it after it occurs.
+
+##### DISK STORAGE SCHEDULING #####
++--------------+----------------+----------+
+| Algorithm    | Total movement | Avg seek |
++--------------+----------------+----------+
+| FCFS         | 640            | 80.0     |
+| SSTF         | 236            | 29.5     |
+| SCAN(down)   | 236            | 26.22    |
+| C-SCAN(down) | 386            | 38.6     |
+| LOOK(down)   | 208            | 26.0     |
+| C-LOOK(down) | 326            | 40.75    |
++--------------+----------------+----------+
+
+Technical observations:
+  - LOOK(down) gives the least head movement (208); FCFS the most (640).
+  - SSTF is efficient but can starve far-away requests; SCAN/LOOK bound the wait.
+  - LOOK/C-LOOK avoid travelling to the physical disk end, saving movement over SCAN/C-SCAN.
+
+Charts saved to outputs/charts/ and CSV tables to outputs/

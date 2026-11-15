@@ -1,0 +1,4 @@
+Strategy,Internal frag (KB),Unused partitions (KB),Unallocated
+First-fit,559,400,[426]
+Best-fit,433,100,none
+Worst-fit,659,300,[426]

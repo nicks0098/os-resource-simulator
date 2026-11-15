@@ -1,0 +1,55 @@
+test_detection (test_deadlock_storage.DeadlockTests.test_detection) ... ok
+test_invalid_inputs (test_deadlock_storage.DeadlockTests.test_invalid_inputs) ... ok
+test_need_matrix (test_deadlock_storage.DeadlockTests.test_need_matrix) ... ok
+test_request_exceeds_available (test_deadlock_storage.DeadlockTests.test_request_exceeds_available) ... ok
+test_request_exceeds_claim (test_deadlock_storage.DeadlockTests.test_request_exceeds_claim) ... ok
+test_request_granted (test_deadlock_storage.DeadlockTests.test_request_granted) ... ok
+test_request_leading_to_unsafe_state_rolls_back (test_deadlock_storage.DeadlockTests.test_request_leading_to_unsafe_state_rolls_back) ... ok
+test_request_within_available_but_unsafe_on_fresh_state (test_deadlock_storage.DeadlockTests.test_request_within_available_but_unsafe_on_fresh_state) ... ok
+test_safe_sequence (test_deadlock_storage.DeadlockTests.test_safe_sequence) ... ok
+test_unsafe_state_detected (test_deadlock_storage.DeadlockTests.test_unsafe_state_detected) ... ok
+test_boundary_head_and_requests_at_edges (test_deadlock_storage.StorageTests.test_boundary_head_and_requests_at_edges) ... ok
+test_invalid_inputs (test_deadlock_storage.StorageTests.test_invalid_inputs) ... ok
+test_look_never_worse_than_scan (test_deadlock_storage.StorageTests.test_look_never_worse_than_scan) ... ok
+test_textbook_totals (test_deadlock_storage.StorageTests.test_textbook_totals) ... ok
+test_analysis_creates_artifacts (test_integration.IntegrationTests.test_analysis_creates_artifacts) ... ok
+test_bash_integration (test_integration.IntegrationTests.test_bash_integration) ... ok
+test_cli_each_module (test_integration.IntegrationTests.test_cli_each_module) ... ok
+test_cli_invalid_input_returns_error_code (test_integration.IntegrationTests.test_cli_invalid_input_returns_error_code) ... ok
+test_cli_missing_and_corrupt_file (test_integration.IntegrationTests.test_cli_missing_and_corrupt_file) ... ok
+test_log_is_written (test_integration.IntegrationTests.test_log_is_written) ... /home/claude/os-resource-simulator/tests/test_integration.py:55: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/claude/os-resource-simulator/logs/activity.log' mode='r' encoding='utf-8'>
+  log = open(os.path.join(ROOT, "logs", "activity.log")).read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_menu_eof_is_graceful (test_integration.IntegrationTests.test_menu_eof_is_graceful) ... ok
+test_menu_survives_bad_input_and_exits (test_integration.IntegrationTests.test_menu_survives_bad_input_and_exits) ... ok
+test_allocation_invalid (test_memory.MemoryTests.test_allocation_invalid) ... ok
+test_allocation_strategies (test_memory.MemoryTests.test_allocation_strategies) ... ok
+test_beladys_anomaly (test_memory.MemoryTests.test_beladys_anomaly) ... ok
+test_boundary_single_frame_all_distinct_and_repeat (test_memory.MemoryTests.test_boundary_single_frame_all_distinct_and_repeat) ... ok
+test_hits_plus_faults_equals_length (test_memory.MemoryTests.test_hits_plus_faults_equals_length) ... ok
+test_invalid_inputs (test_memory.MemoryTests.test_invalid_inputs) ... ok
+test_lru_has_no_anomaly (test_memory.MemoryTests.test_lru_has_no_anomaly) ... ok
+test_optimal_is_lower_bound (test_memory.MemoryTests.test_optimal_is_lower_bound) ... ok
+test_request_larger_than_all_partitions (test_memory.MemoryTests.test_request_larger_than_all_partitions) ... ok
+test_string_input_accepted (test_memory.MemoryTests.test_string_input_accepted) ... ok
+test_textbook_fault_counts (test_memory.MemoryTests.test_textbook_fault_counts) ... ok
+test_bad_quantum_and_algorithm (test_scheduler.SchedulerTests.test_bad_quantum_and_algorithm) ... ok
+test_duplicate_pid_rejected (test_scheduler.SchedulerTests.test_duplicate_pid_rejected) ... ok
+test_empty_and_non_numeric (test_scheduler.SchedulerTests.test_empty_and_non_numeric) ... ok
+test_fcfs_known_values (test_scheduler.SchedulerTests.test_fcfs_known_values) ... ok
+test_idle_gap_when_late_arrival (test_scheduler.SchedulerTests.test_idle_gap_when_late_arrival) ... ok
+test_negative_arrival_rejected (test_scheduler.SchedulerTests.test_negative_arrival_rejected) ... ok
+test_priority_order (test_scheduler.SchedulerTests.test_priority_order) ... ok
+test_quantum_larger_than_bursts_equals_fcfs (test_scheduler.SchedulerTests.test_quantum_larger_than_bursts_equals_fcfs) ... ok
+test_round_robin_quantum_4 (test_scheduler.SchedulerTests.test_round_robin_quantum_4) ... ok
+test_single_process (test_scheduler.SchedulerTests.test_single_process) ... ok
+test_sjf_known_values (test_scheduler.SchedulerTests.test_sjf_known_values) ... ok
+test_srtf_known_values (test_scheduler.SchedulerTests.test_srtf_known_values) ... ok
+test_turnaround_identity (test_scheduler.SchedulerTests.test_turnaround_identity) ... ok
+test_zero_burst_rejected (test_scheduler.SchedulerTests.test_zero_burst_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 5.665s
+
+OK

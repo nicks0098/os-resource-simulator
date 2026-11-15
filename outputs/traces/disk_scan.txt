@@ -1,0 +1,3 @@
+=== Disk Scheduling: SCAN(down) ===
+Head path: 53 -> 37 -> 14 -> 0 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183
+Total head movement=236 cylinders  Average seek=26.22

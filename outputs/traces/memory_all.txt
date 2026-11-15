@@ -1,0 +1,98 @@
+=== Page Replacement: FIFO (3 frames) ===
+ Ref | Frames        | Result
+   7 |  7           | FAULT
+   0 |  7  0        | FAULT
+   1 |  7  0  1     | FAULT
+   2 |  2  0  1     | FAULT
+   0 |  2  0  1     | hit
+   3 |  2  3  1     | FAULT
+   0 |  2  3  0     | FAULT
+   4 |  4  3  0     | FAULT
+   2 |  4  2  0     | FAULT
+   3 |  4  2  3     | FAULT
+   0 |  0  2  3     | FAULT
+   3 |  0  2  3     | hit
+   2 |  0  2  3     | hit
+   1 |  0  1  3     | FAULT
+   2 |  0  1  2     | FAULT
+   0 |  0  1  2     | hit
+   1 |  0  1  2     | hit
+   7 |  7  1  2     | FAULT
+   0 |  7  0  2     | FAULT
+   1 |  7  0  1     | FAULT
+Faults=15 Hits=5 Fault rate=75.0%
+
+=== Page Replacement: LRU (3 frames) ===
+ Ref | Frames        | Result
+   7 |  7           | FAULT
+   0 |  7  0        | FAULT
+   1 |  7  0  1     | FAULT
+   2 |  2  0  1     | FAULT
+   0 |  2  0  1     | hit
+   3 |  2  0  3     | FAULT
+   0 |  2  0  3     | hit
+   4 |  4  0  3     | FAULT
+   2 |  4  0  2     | FAULT
+   3 |  4  3  2     | FAULT
+   0 |  0  3  2     | FAULT
+   3 |  0  3  2     | hit
+   2 |  0  3  2     | hit
+   1 |  1  3  2     | FAULT
+   2 |  1  3  2     | hit
+   0 |  1  0  2     | FAULT
+   1 |  1  0  2     | hit
+   7 |  1  0  7     | FAULT
+   0 |  1  0  7     | hit
+   1 |  1  0  7     | hit
+Faults=12 Hits=8 Fault rate=60.0%
+
+=== Page Replacement: Optimal (3 frames) ===
+ Ref | Frames        | Result
+   7 |  7           | FAULT
+   0 |  7  0        | FAULT
+   1 |  7  0  1     | FAULT
+   2 |  2  0  1     | FAULT
+   0 |  2  0  1     | hit
+   3 |  2  0  3     | FAULT
+   0 |  2  0  3     | hit
+   4 |  2  4  3     | FAULT
+   2 |  2  4  3     | hit
+   3 |  2  4  3     | hit
+   0 |  2  0  3     | FAULT
+   3 |  2  0  3     | hit
+   2 |  2  0  3     | hit
+   1 |  2  0  1     | FAULT
+   2 |  2  0  1     | hit
+   0 |  2  0  1     | hit
+   1 |  2  0  1     | hit
+   7 |  7  0  1     | FAULT
+   0 |  7  0  1     | hit
+   1 |  7  0  1     | hit
+Faults=9 Hits=11 Fault rate=45.0%
+
+=== Contiguous Allocation: First-fit ===
+Partitions: [100, 500, 200, 300, 600]
+Request     Size  Partition
+P1           212  #1 (500 KB)
+P2           417  #4 (600 KB)
+P3           112  #2 (200 KB)
+P4           426  NOT ALLOCATED
+Internal fragmentation=559 KB  Free (unused partitions)=400 KB  Unallocated=[426]
+
+=== Contiguous Allocation: Best-fit ===
+Partitions: [100, 500, 200, 300, 600]
+Request     Size  Partition
+P1           212  #3 (300 KB)
+P2           417  #1 (500 KB)
+P3           112  #2 (200 KB)
+P4           426  #4 (600 KB)
+Internal fragmentation=433 KB  Free (unused partitions)=100 KB  Unallocated=[]
+
+=== Contiguous Allocation: Worst-fit ===
+Partitions: [100, 500, 200, 300, 600]
+Request     Size  Partition
+P1           212  #4 (600 KB)
+P2           417  #1 (500 KB)
+P3           112  #3 (300 KB)
+P4           426  NOT ALLOCATED
+Internal fragmentation=659 KB  Free (unused partitions)=300 KB  Unallocated=[426]

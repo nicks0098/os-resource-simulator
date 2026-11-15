@@ -1,0 +1,23 @@
+=== Disk Scheduling: FCFS ===
+Head path: 53 -> 98 -> 183 -> 37 -> 122 -> 14 -> 124 -> 65 -> 67
+Total head movement=640 cylinders  Average seek=80.0
+
+=== Disk Scheduling: SSTF ===
+Head path: 53 -> 65 -> 67 -> 37 -> 14 -> 98 -> 122 -> 124 -> 183
+Total head movement=236 cylinders  Average seek=29.5
+
+=== Disk Scheduling: SCAN(down) ===
+Head path: 53 -> 37 -> 14 -> 0 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183
+Total head movement=236 cylinders  Average seek=26.22
+
+=== Disk Scheduling: C-SCAN(down) ===
+Head path: 53 -> 37 -> 14 -> 0 -> 199 -> 183 -> 124 -> 122 -> 98 -> 67 -> 65
+Total head movement=386 cylinders  Average seek=38.6
+
+=== Disk Scheduling: LOOK(down) ===
+Head path: 53 -> 37 -> 14 -> 65 -> 67 -> 98 -> 122 -> 124 -> 183
+Total head movement=208 cylinders  Average seek=26.0
+
+=== Disk Scheduling: C-LOOK(down) ===
+Head path: 53 -> 37 -> 14 -> 183 -> 124 -> 122 -> 98 -> 67 -> 65
+Total head movement=326 cylinders  Average seek=40.75

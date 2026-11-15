@@ -1,0 +1,7 @@
+Algorithm,Total movement,Avg seek
+FCFS,640,80.0
+SSTF,236,29.5
+SCAN(down),236,26.22
+C-SCAN(down),386,38.6
+LOOK(down),208,26.0
+C-LOOK(down),326,40.75

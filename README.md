@@ -1,3 +1,7 @@
+## Author
+
+`<Nikhil Dhandhi>` - `<2401360026 / B.Tech CSE UI/UX>`
+
 # OSim - OS Resource Management Simulator
 
 An integrated **Python + Bash** application that simulates the major resource-management functions of an
@@ -189,10 +193,6 @@ awk. A sample is saved in `outputs/traces/activity_sample.log`.
 | 3 - Analysis and Comparison (20) | `osim/analysis.py`, `outputs/charts/`, `outputs/*.csv`, `outputs/analysis_report.txt` |
 | 4 - Testing and Reliability (20) | `tests/`, `osim/validators.py`, exception handling in `main.py`, `osim/logger.py` |
 | 5 - Documentation and Demonstration (20) | This README, `REPORT.md`, `outputs/screenshots/`, `outputs/traces/`, `scripts/run_all.sh` |
-
-## Author
-
-`<Nikhil Dhandhi>` - `<2401360026 / B.Tech CSE UI/UX>`
 
 ## License
 
